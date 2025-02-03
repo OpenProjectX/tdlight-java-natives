@@ -1,5 +1,7 @@
 package it.tdlight.jni;
 
+import org.springframework.data.elasticsearch.annotations.Field;
+
 public class TdApi {
     static {
         try {
@@ -972,6 +974,7 @@ public class TdApi {
         public boolean isDefault;
         public boolean isDark;
         public String name;
+        @Field("document")
         public Document document;
         public BackgroundType type;
 
@@ -12050,6 +12053,8 @@ public class TdApi {
     }
 
     public static class MessageCustomServiceAction extends MessageContent {
+
+        @Field("actionText")
         public String text;
 
         public MessageCustomServiceAction() {
@@ -16769,6 +16774,8 @@ public class TdApi {
     }
 
     public static class PushMessageContentText extends PushMessageContent {
+
+        @Field("pushText")
         public String text;
         public boolean isPinned;
 

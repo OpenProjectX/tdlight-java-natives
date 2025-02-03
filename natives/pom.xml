@@ -12,6 +12,18 @@
     <native.type.classifier>_invalid_</native.type.classifier>
     <buildDirectory>${project.basedir}/target-${native.type.classifier}</buildDirectory>
   </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-elasticsearch</artifactId>
+      <version>5.4.0</version>
+<!--      <scope>runtime</scope>-->
+    </dependency>
+
+  </dependencies>
+
   <distributionManagement>
     <repository>
       <id>mchv-release-distribution</id>
