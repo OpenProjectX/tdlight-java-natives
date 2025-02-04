@@ -79,11 +79,11 @@ jobs:
           echo "REVISION: $REVISION"
 
           ./.github/workflows/scripts/build_api.sh
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: tdlight-api-${{env.REVISION}}.jar
           path: api/target/tdlight-api-${{env.REVISION}}.jar
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: tdlight-api-${{env.REVISION}}-legacy.jar
           path: api/target-legacy/tdlight-api-${{env.REVISION}}-legacy.jar
